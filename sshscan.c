@@ -92,7 +92,7 @@ int main() {
          printf(RED "no devices found\n");
     }
     for (int i = 0; i < lines; i++) {
-        printf(GREEN "Found device with IP: %s %s %s MAC: %s %s %s on interface: %s %s %s\n",
+        printf(GREEN "Found device with IP: %s %15s %s MAC: %s %15s %s on interface: %s %15s %s\n",
                MAGENTA,
                ips[i],
                GREEN,
@@ -109,7 +109,7 @@ int main() {
     int found = -1;
     for (int i = 0; i < lines; i++) {
         if (isPortOpen(ips[i], PORT) > 0){
-             printf(GREEN "Device with IP: %s %s %s listens on port: %s %d %s\n",
+             printf(GREEN "Device with IP: %s %15s %s listens on port: %s %5d %s\n",
                MAGENTA,
                ips[i],
                GREEN,
